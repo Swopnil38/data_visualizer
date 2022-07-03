@@ -25,7 +25,7 @@ def get_cmap(n, name='hsv'):
 def horizontal_bar(Labels,value_male,value_female,channel_name):
     image_name = f'static/images/{channel_name}_AgeGender.png'
     def get_flag(gender,name):
-        path = 'imgs\\{}\\{}.png'.format(gender,name)
+        path = 'imgs/{}/{}.png'.format(gender,name)
         
         im = plt.imread(path)
         return im
