@@ -32,7 +32,7 @@ def read_yt_csv(name):
         except:
             return 0,0
     
-    data = pd.ExcelFile('data\{}.xlsx'.format(name))
+    data = pd.ExcelFile('data/{}.xlsx'.format(name))
     GenderAge = pd.read_excel(data,'GenderWiseAge')
     Geography = pd.read_excel(data,'Geography')
     view = pd.read_excel(data,'view')
@@ -141,7 +141,7 @@ def read_yt_csv(name):
 
 
 def read_yt_csv_dately(name,yr,mo):
-    data = pd.ExcelFile('data\{}.xlsx'.format(name))
+    data = pd.ExcelFile('data/{}.xlsx'.format(name))
     view = pd.read_excel(data,'view')
     view['year'] = pd.DatetimeIndex(view['date']).year
     view['month'] = pd.DatetimeIndex(view['date']).month
@@ -183,7 +183,7 @@ def read_fb_insta(name):
             return geolocate(country)
         except:
             return 0,0
-    data = pd.ExcelFile('data\{}.xlsx'.format(name))
+    data = pd.ExcelFile('data/{}.xlsx'.format(name))
     insta_age = pd.read_excel(data,'InstagramAge')
     fb_age = pd.read_excel(data,'FacebookAge')
     insta_Geography = pd.read_excel(data,'Instagram_Geography')
@@ -317,7 +317,7 @@ def tiktok_data(name):
         except:
             return 0,0
     
-    data = pd.ExcelFile('data\{}.xlsx'.format(name))
+    data = pd.ExcelFile('data/{}.xlsx'.format(name))
     tiktok_age = pd.read_excel(data,'Tiktok_Age')
     tiktok_Geography = pd.read_excel(data,'Tiktok_Geography')
     tiktok_follower = pd.read_excel(data,'Tiktok_Follower')
