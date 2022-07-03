@@ -25,11 +25,9 @@ try:
 except:
     st.title("No Data Found of Youtube")
 
-try:
-    figure = horizontal_bar(ages_yt,male_viewer_yt,female_viewer_yt,option)
-    st.pyplot(figure)
-except:
-    st.title("No Data Found of Youtube Age Found")
+figure = horizontal_bar(ages_yt,male_viewer_yt,female_viewer_yt,option)
+st.pyplot(figure)
+
  
 try:
     col,col2 = st.columns([3,2])
